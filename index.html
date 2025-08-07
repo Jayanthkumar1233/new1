@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Anime.js for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="main-heading">🪶Time less Truths</h1>
+
+    <!-- Top-left container for the date -->
+    <div class="top-left-container">
+        <div class="date-container">
+            <span id="current-date" class="date-text"></span>
+        </div>
+    </div>
+
+    <!-- Top-right container for the Favorites button -->
+    <div class="top-right-container">
+        <button type="button" id="favorites-btn" class="favorites-heart-btn" title="Show Favorites" aria-label="Show Favorites">
+            <i class="fas fa-heart"></i>
+        </button>
+    </div>
+
+    <!-- Main quote container -->
+    <div class="quote-container">
+        <div class="quote-box">
+            <p id="quote-text"></p>
+            <cite id="quote-author"></cite>
+        </div>
+
+        <!-- Button group for quote actions -->
+        <div class="button-group">
+            <button type="button" id="next-quote-btn" class="quote-btn">Next Quote</button>
+            <button type="button"  id="save-quote-btn" class="quote-btn save-btn">
+                <span id="save-icon" class="save-icon">♡</span>
+                <span id="save-text">Save Quote</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Container for the animated dots -->
+    <div id="dot-container" class="dot-container"></div>
+
+    <!-- Favorites sidebar -->
+    <div id="favorites-sidebar" class="favorites-sidebar">
+        <div class="sidebar-header">
+            <h2>Your Favorites</h2>
+            <button type="button" id="close-favorites-btn" class="close-btn">&times;</button>
+        </div>
+        <ul id="favorites-list" class="favorites-list">
+            <!-- Favorite quotes will be dynamically added here -->
+        </ul>
+        <p id="no-favorites-msg" class="no-favorites-message">No favorite quotes yet.</p>
+    </div>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
